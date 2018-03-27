@@ -1,0 +1,76 @@
+<div class="Download">
+  <div class="Download-top">
+    <h1 class="Download-title">
+      Download MyCrypto for
+      <span class="Download-title-os"></span>
+    </h1>
+    <p class="Download-description">
+      Run MyCrypto securely and offline with the desktop application. Powered by Electron,
+      it's the same MyCrypto app, running in a sandboxed environment.
+    </p>
+
+    <div class="Download-download">
+      <a
+        class="Download-download-button"
+        href="https://github.com/MyCryptoHQ/MyCrypto/releases/latest"
+      >
+        Download from Github
+        <i class="Download-download-button-icon"></i>
+      </a>
+      <a
+        class="Download-download-link"
+        href="https://github.com/MyCryptoHQ/MyCrypto/releases"
+      >
+        Release History
+      </a>
+      <a
+        class="Download-download-link"
+        href="https://github.com/MyCryptoHQ/MyCrypto/releases/latest"
+      >
+        Release Notes
+      </a>
+    </div>
+  </div>
+
+  <div class="Download-screenshot">
+    <div class="Download-screenshot-ui">
+      <div class="Download-screenshot-ui-btn is-close"></div>
+      <div class="Download-screenshot-ui-btn is-minimize"></div>
+      <div class="Download-screenshot-ui-btn is-maximize"></div>
+    </div>
+    <img class="Download-screenshot-img" src="./assets/images/screenshot.png" />
+  </div>
+
+  <div class="Download-features">
+    <% for (let i = 0; i < features.length; i++) { %>
+      <div class="Download-features-feature">
+        <div class="Download-features-feature-left">
+          <div
+            class="Download-features-feature-icon"
+            style="background-image: url(./assets/images/icon-<%- features[i].icon %>.svg);"
+          >
+            <img class=""
+            <i class="fa fa-<%- features[i].icon %>"></i>
+          </div>
+        </div>
+        <div class="Download-features-feature-right">
+          <h3 class="Download-features-feature-title">
+            <%- features[i].title %>
+          </h3>
+          <p class="Download-features-feature-text">
+            <%- features[i].text %>
+          </p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+
+  <div class="Download-final">
+    <a
+      class="Download-final-button"
+      href="https://github.com/MyCryptoHQ/MyCrypto/releases/latest"
+    >
+      Download from Github
+    </a>
+  </div>
+</div>

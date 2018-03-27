@@ -1,0 +1,47 @@
+.Footer {
+  background-color: $brand-info;
+  padding: 1rem;
+  margin-top: 6rem;
+  border-top: 3px solid $brand-primary;
+  color: #FFF;
+  text-align: center;
+
+  &-about {
+    &-logo {
+      display: block;
+      width: 100%;
+      max-width: 245px;
+      margin: 0 auto .75rem;
+      text-align: center;
+
+      &-img {
+        width: 100%;
+      }
+    }
+
+    &-links {
+      margin-bottom: .75rem;
+
+      > a {
+        margin: 0 .5rem;
+        color: #FFF;
+        font-size: 1.1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      margin: 0 auto 1rem;
+      max-width: 580px;
+    }
+
+    &-copyright {
+      font-size: .95rem;
+    }
+  }
+}

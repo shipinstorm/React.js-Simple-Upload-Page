@@ -1,0 +1,25 @@
+{
+  "name": "buy.mycrypto.com",
+  "version": "1.0.0",
+  "description": "Purchase page for simplex integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MyCrypto",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.1",
+    "gulp-ejs": "3.1.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sri-hash": "1.5.0"
+  },
+  "dependencies": {
+    "css-reset": "0.0.1"
+  }
+}

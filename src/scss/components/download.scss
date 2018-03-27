@@ -1,0 +1,279 @@
+$screenshot-bleed: 200px;
+
+@keyframes background-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes screenshot-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@mixin download-button {
+  display: block;
+  max-width: 320px;
+  margin: 0 auto 1rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: color 100ms ease, transform 100ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+}
+
+.Download {
+  position: relative;
+  text-align: center;
+
+  &-top {
+    padding: 4rem 1rem $screenshot-bleed;
+    color: #FFF;
+    background: linear-gradient(-120deg, $brand-info, $brand-primary, $brand-info);
+    background-size: 400% 400%;
+    animation: background-gradient 40s ease infinite;
+  }
+
+  &-title {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    max-width: 660px;
+    margin: 0 auto 2rem;
+    opacity: 0.92;
+  }
+
+  &-download {
+    margin-bottom: 5rem;
+
+    &-button {
+      @include download-button;
+      background: #FFF;
+      color: $text-color;
+
+      &:hover {
+        color: $brand-primary;
+      }
+
+      &-icon {
+        display: inline-block;
+        width: 18px;
+        height: 16px;
+        background-size: cover;
+        background-image: url('./assets/images/icon-external.svg');
+        margin-left: 0.2rem;
+      }
+    }
+
+    &-link {
+      margin: 0 0.5rem;
+      color: #FFF;
+      opacity: 0.6;
+
+      &:hover,
+      &:active {
+        color: #FFF;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-screenshot {
+    position: relative;
+    display: block;
+    max-width: 1020px;
+    width: 95%;
+    margin: -$screenshot-bleed auto 8rem;
+    animation: screenshot-slide 800ms ease 1;
+    animation-delay: 1200ms;
+    animation-fill-mode: both;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12),
+                0 3px 4px rgba(0, 0, 0, 0.12);
+
+    &.is-osx {
+      border-radius: 6px;
+    }
+
+    &-img {
+      width: 100%;
+
+      .is-osx & {
+        border: 1px solid rgba(#666, 0.3);
+        border-top: none;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      .is-windows & {
+        border: 1px solid #fff;
+        border-top: none;
+      }
+    }
+
+    &-ui {
+      display: flex;
+      align-items: center;
+
+      &-btn {
+        position: relative;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      // OSX
+      .is-osx & {
+        height: 22px;
+        background-image: linear-gradient(180deg, #e8e6e8, #d2d0d2);
+        border-bottom: 1px solid #d2d0d2;
+        border-top: 1px solid #f5f4f5;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+
+        &-btn {
+          width: 12px;
+          height: 12px;
+          margin-left: 8px;
+          box-shadow: 0 0 0 1px rgba(#000, 0.1) inset;
+          border-radius: 100%;
+
+          &.is-close { background: #ff5e52; }
+          &.is-minimize { background: #ffbe00; }
+          &.is-maximize { background: #1fcc36; }
+        }
+      }
+
+      // Windows
+      .is-windows & {
+        height: 28px;
+        background: #fff;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        &-btn {
+          width: 10px;
+          height: 10px;
+          margin-left: 34px;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          &.is-close {
+            order: 3;
+            background-image: url('./assets/images/icon-windows-close.svg');
+          }
+          &.is-minimize {
+            order: 1;
+            background-image: url('./assets/images/icon-windows-minimize.svg');
+          }
+          &.is-maximize {
+            order: 2;
+            background-image: url('./assets/images/icon-windows-maximize.svg');
+          }
+        }
+      }
+
+      // Linux
+      .is-linux & {
+        height: 28px;
+        padding-left: 4px;
+        background-image: linear-gradient(180deg, #595451, #41403c);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        box-shadow: 0 1px #615f51 inset;
+
+        &-btn {
+          width: 16px;
+          height: 16px;
+          margin-left: 3px;
+          border-radius: 100%;
+          border: 1px solid #3c3932;
+          background: linear-gradient(180deg, #94938f, #5d5c58);
+
+          &.is-close {
+            background: linear-gradient(180deg, #f3875a, #e1490b);
+
+            &:after {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    max-width: 860px;
+    margin: 0 auto;
+
+    &-feature {
+      display: flex;
+      flex-direction: row;
+      max-width: 360px;
+      margin: 0 1rem 3rem;
+      text-align: left;
+
+      &-left {
+        padding-right: 1rem;
+      }
+
+      &-icon {
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        margin: 0 auto 0.5rem;
+        color: #FFF;
+        border-radius: 8px;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba($brand-info, 0.15) !important;
+      }
+
+      &-title {
+        font-size: 1.6rem;
+        // font-weight: 300;
+        margin-bottom: 0.5rem;
+      }
+
+      &-text {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-final {
+    margin: 6rem 0 1rem;
+
+    &-button {
+      @include download-button;
+      background: $brand-primary;
+      color: #FFF;
+
+      &:hover {
+        color: #FFF;
+        opacity: 0.9;
+      }
+    }
+  }
+}
