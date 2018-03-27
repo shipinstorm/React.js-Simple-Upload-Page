@@ -1,17 +1,6 @@
-# MyCrypto Static Template
+# MyCrypto Download Page
 
-Copyable repo for spinning up a new static page subdomain. Unlike our more code
-heavy repos, this template aims to be very simple and easily edited by everyone
-on the team. The goal is also to keep these pages as light as possible, so
-there are no libraries included by default. There are, however, some
-preprocessors at work:
-
-* HTML is compiled with EJS to allow for variables and reusable components
-* JS is compiled with Babel to allow for file bundling and language features
-* CSS is compiled with SCSS to allow for variables, mixins, and file bundling
-
-Gulp is used for compilation because this template is not meant for JS-first
-websites, so Webpack / Rollup didn't seem like the right tool for the job.
+Static page for downloading the MyCrypto Electron app.
 
 ## Running the Project
 
