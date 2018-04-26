@@ -91,7 +91,13 @@ const App = () => (
             href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/1/checksums.txt"
             className="App-other-links-release-notes"
           >
-            signatures
+            checksums
+          </a>
+          <a
+            href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/1/checksums.txt.gpg"
+            className="App-other-links-release-notes"
+          >
+            signed checksums
           </a>
         </div>
       </div>
