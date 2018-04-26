@@ -17,6 +17,7 @@
     "@types/webpack-env": "^1.13.5",
     "babel-loader": "^7.1.4",
     "chalk": "^2.3.2",
+    "clean-webpack-plugin": "^0.1.19",
     "core-js": "^2.5.5",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
