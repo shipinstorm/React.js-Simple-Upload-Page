@@ -1,0 +1,248 @@
+@import 'src/sass/mixins/index';
+@import 'src/sass/variables/index';
+
+.App {
+  display: block;
+  &-main {
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    flex-wrap: nowrap;
+    @media screen and (max-width: 1216px) {
+      flex-wrap: wrap;
+    }
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &-left,
+    &-right {
+      margin: 2rem;
+    }
+  }
+  &-title {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  &-description {
+    color: white;
+    font-weight: 400;
+    font-size: 1.15rem;
+    max-width: 50ch;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  &-screenshot {
+    max-width: 832px;
+    width: 100%;
+    box-shadow: 0 8px 38px 3px rgba(0, 0, 0, 0.2);
+  }
+  &-download {
+    @include button(white);
+    color: $primary-color;
+    transition: box-shadow 150ms ease-out;
+    padding: 0.5rem 3rem;
+    font-size: 1.25rem;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    clear: both;
+    float: left;
+    margin-bottom: 1rem;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    > .nc-icon {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    &:hover {
+      box-shadow: 0 0px 30px 1px rgba(255, 255, 255, 0.2);
+    }
+  }
+  &-linux-download {
+    &-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transform: none;
+    position: initial;
+    margin-bottom: 0;
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+  &-other-links {
+    clear: both;
+    text-align: center;
+    > a {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.68);
+      transition: color $transition;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  &-marketing {
+    background-color: white;
+    padding: 2rem 0;
+    &-box-wrapper {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+      max-width: 1248px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-box {
+      max-width: calc(50% - 3rem);
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin: 1rem;
+      padding: 1.5rem;
+      margin: 1.5rem;
+      align-items: end;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        max-width: 576px;
+      }
+      &-content {
+        margin-left: 3rem;
+      }
+      &-img {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      &-title {
+        color: $primary-color;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.75rem;
+        font-weight: 400;
+      }
+      &-description {
+        margin: 0;
+      }
+    }
+  }
+  &-other-platforms {
+    background-color: #f1f6fa;
+    padding: 1rem;
+    &-wrapper {
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @media screen and (max-width: 1024px) {
+        justify-content: center;
+        flex-direction: column;
+        max-width: 576px;
+      }
+    }
+  }
+  &-platform {
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0.5rem 1rem;
+    border-radius: $border-radius;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(153, 170, 181, 0.3);
+    padding: 1rem 3rem;
+    color: #51545a;
+    font-size: 1.25rem;
+    transition: box-shadow 150ms ease;
+    @media screen and (max-width: 1024px) {
+      max-width: 576px;
+    }
+    &-title {
+      color: black;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    > .nc-icon {
+      color: #6f90b2;
+      font-size: 2rem;
+      margin-left: 0;
+      margin-right: 2rem;
+    }
+    &-content {
+      line-height: 1;
+      > a {
+        color: $primary-color;
+        margin-top: 0;
+        font-size: 0.75rem;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 650px) {
+      height: 100%;
+      padding: 1rem;
+    }
+    &:hover {
+      box-shadow: 0 9px 30px 1px rgba(153, 170, 181, 0.2);
+    }
+  }
+}
+.Footer {
+  background-color: #163151;
+  color: white;
+  text-align: center;
+  border-top: 3px solid #007896;
+  padding: 1rem;
+  &-logo {
+    display: block;
+    margin: auto;
+    background-image: url('../assets/imgs/logo-mycrypto.svg');
+    width: 245px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 0.75rem;
+  }
+  &-links {
+    margin-bottom: 0.75rem;
+    > a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+  }
+  &-text {
+    font-size: 0.75rem;
+    font-weight: 300;
+    max-width: 580px;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+  }
+  &-copyright {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}

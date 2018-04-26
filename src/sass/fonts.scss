@@ -1,0 +1,86 @@
+$font-path: '../assets/fonts';
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path+'/Roboto-Mono-Regular.woff2') format('woff2'),
+    url($font-path+'/Roboto-Mono-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path+'/Lato-Regular.woff2') format('woff2'),
+    url($font-path+'/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url($font-path+'/Lato-Light.woff2') format('woff2'),
+    url($font-path+'/Lato-Light.woff') format('woff');
+}
+
+/* --------------------------------
+
+icons Web Font - nucleoapp.com/
+License - nucleoapp.com/license/
+
+-------------------------------- */
+
+@font-face {
+  font-family: 'icons';
+  src: url($font-path+'/icons.woff2') format('woff2'), url($font-path+'/icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------
+	base class definition
+-------------------------*/
+
+.nc-icon {
+  display: inline-block;
+  font: normal normal normal 2rem / 1 'icons';
+  font-size: inherit;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: content-box;
+
+  &.size_16px {
+    height: 16px;
+    width: 16px;
+  }
+
+  &.size_24px {
+    height: 24px;
+    width: 24px;
+  }
+
+  &.size_32px {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+/*------------------------
+  change icon size
+-------------------------*/
+
+.nc-icon.lg {
+  font-size: 1.33333333em;
+  vertical-align: -16%;
+}
+
+.nc-icon.x2 {
+  font-size: 2em;
+}
+
+.nc-icon.x3 {
+  font-size: 3em;
+}
