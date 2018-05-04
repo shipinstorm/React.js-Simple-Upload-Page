@@ -24,10 +24,10 @@ export const Platform = ({ title, href }: Props) => {
       <i className="nc-icon nc-linux" />
       <div className="App-platform-content">
         <p className="App-platform-title">{title}</p>
-        <a href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/1/MyCrypto-1-0-0-ALPHA1-linux-i386.AppImage">
+        <a href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-linux-i386.AppImage">
           32-bit
         </a>
-        <a href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/1/MyCrypto-1-0-0-ALPHA1-linux-x86_64.AppImage">
+        <a href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-linux-x86_64.AppImage">
           64-bit
         </a>
       </div>
