@@ -14,22 +14,23 @@ import { Platform } from './platform';
 const builds = [
   {
     name: 'macOS',
-    link: 'https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-mac.dmg'
+    link:
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/mac_1.0.0-alpha.4_MyCrypto.dmg'
   },
   {
     name: 'Windows',
     link:
-      'https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-windows.exe'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/windows_1.0.0-alpha.4_MyCrypto.exe'
   },
   {
     name: 'Linux',
     link:
-      'https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-linux-x86_64.AppImage'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/linux-x86-64_1.0.0-alpha.4_MyCrypto.AppImage'
   },
   {
     name: 'Stand Alone',
     link:
-      'https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-standalone.zip'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/standalone_1.0.0-alpha.4_MyCrypto.zip'
   }
 ];
 
@@ -58,14 +59,14 @@ const App = () => (
         {OS === 'Linux' ? (
           <div className="App-linux-download-wrapper">
             <a
-              href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-linux-i386.AppImage"
+              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/linux-i386_1.0.0-alpha.4_MyCrypto.AppImage"
               className="App-download App-linux-download"
             >
               <i className="nc-icon nc-hit-down" />
               Download 32-bit
             </a>
             <a
-              href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/MyCrypto-1-0-0-RC2-linux-x86_64.AppImage"
+              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/linux-x86-64_1.0.0-alpha.4_MyCrypto.AppImage"
               className="App-download App-linux-download"
             >
               <i className="nc-icon nc-hit-down" />
@@ -87,13 +88,13 @@ const App = () => (
             release notes
           </a>
           <a
-            href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/checksums.txt"
+            href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/checksums.txt"
             className="App-other-links-release-notes"
           >
             checksums
           </a>
           <a
-            href="https://s3-us-west-2.amazonaws.com/mycrypto-electron-alpha/2/checksums.txt.gpg"
+            href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.0/checksums.txt.gpg"
             className="App-other-links-release-notes"
           >
             signed checksums
