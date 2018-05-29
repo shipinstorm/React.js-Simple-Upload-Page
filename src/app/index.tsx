@@ -108,7 +108,6 @@ const App = () => (
     <div className="App-other-platforms">
       <div className="App-other-platforms-wrapper">
         {builds
-          .filter(_ => _.name !== OS)
           .map(_ => <Platform key={_.name} title={_.name} href={_.link} />)}
       </div>
     </div>
