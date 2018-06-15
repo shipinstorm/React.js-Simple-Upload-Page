@@ -15,22 +15,22 @@ const builds = [
   {
     name: 'macOS',
     link:
-      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/mac_1.1.0-alpha.6_MyCrypto.dmg'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/mac_1.0.0-alpha.6_MyCrypto.dmg'
   },
   {
     name: 'Windows',
     link:
-      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/windows_1.1.0-alpha.6_MyCrypto.exe'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/windows_1.0.0-alpha.6_MyCrypto.exe'
   },
   {
     name: 'Linux',
     link:
-      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-x86-64_1.1.0-alpha.6_MyCrypto.AppImage'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-x86-64_1.0.0-alpha.6_MyCrypto.AppImage'
   },
   {
     name: 'Stand Alone',
     link:
-      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/standalone_1.1.0-alpha.6_MyCrypto.zip'
+      'https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/standalone_1.0.0-alpha.6_MyCrypto.zip'
   }
 ];
 
@@ -59,14 +59,14 @@ const App = () => (
         {OS === 'Linux' ? (
           <div className="App-linux-download-wrapper">
             <a
-              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-i386_1.1.0-alpha.6_MyCrypto.AppImage"
+              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-i386_1.0.0-alpha.6_MyCrypto.AppImage"
               className="App-download App-linux-download"
             >
               <i className="nc-icon nc-hit-down" />
               Download 32-bit
             </a>
             <a
-              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-x86-64_1.1.0-alpha.6_MyCrypto.AppImage"
+              href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-x86-64_1.0.0-alpha.6_MyCrypto.AppImage"
               className="App-download App-linux-download"
             >
               <i className="nc-icon nc-hit-down" />
