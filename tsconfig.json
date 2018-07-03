@@ -12,6 +12,7 @@
     "baseUrl": "./src/",
     "noEmitOnError": false,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "lib": ["es2017", "dom"]
   }
 }

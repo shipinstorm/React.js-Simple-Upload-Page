@@ -3,6 +3,8 @@ import * as React from 'react';
 interface Props {
   title: string;
   href: string;
+  linux32Url: string;
+  linux64Url: string;
 }
 
 const getPlatform: any = (title: string) => {
@@ -18,20 +20,14 @@ const getPlatform: any = (title: string) => {
   }
 };
 
-// https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.0.2/linux-i386_1.0.2-alpha.5_MyCrypto.AppImage
-
-export const Platform = ({ title, href }: Props) => {
+export const Platform = ({ title, href, linux32Url, linux64Url }: Props) => {
   return getPlatform(title) === 'lin' ? (
     <div className="App-platform">
       <i className="nc-icon nc-linux" />
       <div className="App-platform-content">
         <p className="App-platform-title">{title}</p>
-        <a href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-i386_1.0.0-alpha.6_MyCrypto.AppImage">
-          32-bit
-        </a>
-        <a href="https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.1.0/linux-x86-64_1.0.0-alpha.6_MyCrypto.AppImage">
-          64-bit
-        </a>
+        <a href={linux32Url}>32-bit</a>
+        <a href={linux64Url}>64-bit</a>
       </div>
     </div>
   ) : (
