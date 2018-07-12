@@ -145,7 +145,7 @@ class App extends React.Component<{}, State> {
                 className="App-download"
               >
                 <i className="nc-icon nc-hit-down" />
-                Download Alpha
+                Download
               </a>
             )}
             <br />
