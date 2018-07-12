@@ -118,10 +118,14 @@ class App extends React.Component<{}, State> {
       <div className="App">
         <main className="App-main">
           <div className="App-main-left">
-            <h1 className="App-title">MyCrypto for {OS}</h1>
+            <h1 className="App-title">
+              The Same MyCrypto. 
+              <br />
+              Now for {OS}.
+            </h1>
             <p className="App-description">
-              Run MyCrypto securely and offline with the desktop application. Powered by Electron,
-              it's the same MyCrypto app, running in a sandboxed environment.
+              Keep your keys out of the browser with the MyCrypto Desktop App. 
+              You get more access to your funds, and scammers get less access to you. 
             </p>
             {version && <p className="App-version">Version {version}</p>}
             {OS === 'Linux' ? (
