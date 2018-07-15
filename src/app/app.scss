@@ -9,20 +9,26 @@
   }
   &-container {
     @extend .container;
+    padding-top: $space;
+  }
+  &-logo {
+    width: 12.5rem;
+    height: 3.3rem;
   }
   &-row {
     @extend .row;
-    padding-top: $space-md;
     align-items: center;
     margin-bottom: -$space;
   }
   &-left {
-    @extend .col-sm-5;
+    @extend .col-12;
+    @extend .col-md-5;
     padding-top: $space;
     padding-bottom: $space-md;
   }
   &-right {
-    @extend .col-sm-7;
+    @extend .col-12;
+    @extend .col-md-7;
   }
   &-title {
     color: white;

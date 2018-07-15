@@ -10,6 +10,7 @@ import * as Wallets from 'assets/imgs/illust-wallets.svg';
 import * as Send from 'assets/imgs/illust-send.svg';
 import * as Manage from 'assets/imgs/illust-manage.svg';
 import * as Champagne from 'assets/imgs/illust-champagne.svg';
+import * as MyCryptoLogoWhite from 'assets/imgs/logo-mycrypto-white.svg';
 import { Block } from './block';
 import { Platform } from './platform';
 import { fetchAsync } from '../functions';
@@ -56,6 +57,8 @@ const img2: any = DesktopCreate;
 const img3: any = DesktopAddressBook;
 
 const img4: any = Champagne;
+
+const logo: any = MyCryptoLogoWhite;
 
 type TAssetInfo = { name: string; link: string };
 
@@ -117,6 +120,7 @@ class App extends React.Component<{}, State> {
       <div className="App">
         <section className="App-background">
           <div className="App-container">
+            <img src={logo} alt="" className="App-logo" />
             <div className="App-row">
               <div className="App-left">
                 <h1 className="App-title">

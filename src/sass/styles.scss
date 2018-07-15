@@ -21,7 +21,10 @@ body {
   height: 100%;
   width: 100%;
   background-color: #fafafa;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 40rem) {
     font-size: 13px;
   }
 }
