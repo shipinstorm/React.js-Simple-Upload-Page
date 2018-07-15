@@ -1,80 +1,60 @@
 @import 'src/sass/mixins/index';
 @import 'src/sass/variables/index';
+@import 'src/sass/grid';
 
 .App {
   display: block;
-  &-main {
-    width: 100%;
+  &-background {
     background-color: $primary-color;
-    display: flex;
-    flex-wrap: nowrap;
-    @media screen and (max-width: 1216px) {
-      flex-wrap: wrap;
-    }
-    flex-direction: row;
+  }
+  &-container {
+    @extend .container;
+  }
+  &-row {
+    @extend .row;
+    padding-top: $space-md;
     align-items: center;
-    justify-content: center;
-    &-left,
-    &-right {
-      margin: 2rem;
-    }
+    margin-bottom: -$space;
+  }
+  &-left {
+    @extend .col-sm-5;
+    padding-top: $space;
+    padding-bottom: $space-md;
+  }
+  &-right {
+    @extend .col-sm-7;
   }
   &-title {
-    font-size: 3rem;
-    font-weight: 400;
     color: white;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    text-align: center;
+    font-size: $font-size-xl;
+    font-weight: 900;
+    line-height: 1.3;
+    margin: 0 0 0.25em;
   }
   &-description {
     color: white;
-    font-weight: 400;
-    font-size: 1.15rem;
-    max-width: 50ch;
+    font-size: $font-size-bump;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
     margin-top: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  &-version {
-    color: rgba(255, 255, 255, 0.68);
-    font-weight: 400;
-    font-size: 1.15 rem;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    text-align: center;
+    max-width: 33rem;
   }
   &-screenshot {
-    max-width: 832px;
     width: 100%;
-    box-shadow: 0 8px 38px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0.02), 0 12px 34px 0 rgba(180,180,180,0.23);
   }
   &-download {
-    @include button(white);
-    color: $primary-color;
-    transition: box-shadow 150ms ease-out;
-    padding: 0.5rem 3rem;
-    font-size: 1.25rem;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-    clear: both;
-    float: left;
-    margin-bottom: 1rem;
-    transform: translateX(-50%);
-    position: relative;
-    left: 50%;
-    > .nc-icon {
-      margin-left: 0;
-      margin-right: 1rem;
-    }
-    &:hover {
-      box-shadow: 0 0px 30px 1px rgba(255, 255, 255, 0.2);
+    @include button(white, $gray-darkest);
+    margin-bottom: 1.5em;
+    &.nc-icon {
+      vertical-align: text-bottom;
     }
   }
   &-linux-download {
     &-wrapper {
       display: flex;
       flex-wrap: nowrap;
-      justify-content: center;
     }
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -86,110 +66,50 @@
     }
   }
   &-other-links {
-    clear: both;
-    text-align: center;
     > a {
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.68);
-      transition: color $transition;
+      color: white;
+      font-size: $font-size-sm;
+      transition: text-decoration $transition ease;
       &:not(:last-child) {
-        margin-right: 1.5rem;
+        margin-right: $space;
       }
       &:hover {
-        color: white;
+        text-decoration: underline;
       }
     }
   }
-  &-marketing {
-    background-color: white;
-    padding: 2rem 0;
-    &-box-wrapper {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin-bottom: 4rem;
-      max-width: 1248px;
-      margin: 0 auto;
-      margin-bottom: 1rem;
-      @media screen and (max-width: 900px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    &-box {
-      max-width: calc(50% - 3rem);
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      margin: 1rem;
-      padding: 1.5rem;
-      margin: 1.5rem;
-      align-items: end;
-      @media screen and (max-width: 900px) {
-        width: 100%;
-        max-width: 576px;
-      }
-      &-content {
-        margin-left: 3rem;
-      }
-      &-img {
-        width: 3.5rem;
-        height: 3.5rem;
-      }
-      &-title {
-        color: $primary-color;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-size: 1.75rem;
-        font-weight: 400;
-      }
-      &-description {
-        margin: 0;
-      }
-    }
+}
+
+.Platforms {
+  background-color: $gray-lightest;
+  width: 100%;
+  &-container {
+    @extend .container;
+    padding-top: 2rem;
+    padding-bottom: $space;
   }
-  &-other-platforms {
-    background-color: #f1f6fa;
-    padding: 1rem;
-    &-wrapper {
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      @media screen and (max-width: 1024px) {
-        justify-content: center;
-        flex-direction: column;
-        max-width: 576px;
-      }
-    }
+  &-row {
+    @extend .row;
   }
-  &-platform {
+  &-column {
+    @extend .col-12;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+  }
+  &-button {
+    @include button(white, $gray-darkest);
     display: flex;
-    max-width: 300px;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    margin: 0.5rem 1rem;
-    border-radius: $border-radius;
-    background-color: white;
-    box-shadow: 0 0 0 1px rgba(153, 170, 181, 0.3);
-    padding: 1rem 3rem;
-    color: #51545a;
-    font-size: 1.25rem;
-    transition: box-shadow 150ms ease;
-    @media screen and (max-width: 1024px) {
-      max-width: 576px;
-    }
-    &-title {
-      color: black;
-      font-size: 1.25rem;
-      margin: 0;
+    margin: 0;
+    height: 100%;
+    &:hover {
+      box-shadow: 0 9px 30px 1px rgba(153, 170, 181, 0.2);
     }
     > .nc-icon {
-      color: #6f90b2;
-      font-size: 2rem;
+      font-size: 1.4em;
       margin-left: 0;
       margin-right: 2rem;
     }
@@ -204,20 +124,213 @@
         }
       }
     }
-    @media screen and (max-width: 650px) {
-      height: 100%;
-      padding: 1rem;
-    }
-    &:hover {
-      box-shadow: 0 9px 30px 1px rgba(153, 170, 181, 0.2);
+    &-title {
+      margin: 0;
     }
   }
 }
-.Footer {
-  background-color: #163151;
+
+.Row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: $space-md 0;
+  width: 100%;
+  &-container {
+    @extend .container;
+  }
+  &-row {
+    @extend .row;
+  }
+  &-img-wrapper {
+    @extend .col-12;
+    @extend .col-sm-6;
+    padding-top: $space;
+    padding-bottom: $space;
+    align-self: center;
+  }
+  &-img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0.02), 0 12px 34px 0 rgba(180,180,180,0.23);
+  }
+  &-content {
+    @extend .col-12;
+    @extend .col-sm-6;
+    align-self: center;
+    @media (min-width: 50rem) {
+      padding: $space $space-lg;
+    }
+  }
+  &-title {
+    font-size: $font-size-xl;
+    margin: 0 0 $space-sm 0;
+  }
+  &-description {
+    margin: 0 0 $space 0;
+  }
+  &-subtext {
+    font-size: $font-size-sm;
+    font-style: italic;
+    opacity: .9;
+  }
+  &-button {
+    @include button(white, $gray-darkest);
+  }
+  &-button-linux {
+    @include button(white, $gray-darkest);
+    font-size: $font-size-sm;
+    padding: 0.7em 1.5em;
+    margin-bottom: .5rem;
+    font-size: $font-size-sm;
+    &:first-child {
+      margin-right: .5rem;
+    }
+  }
+  &-white {
+    background-color: white;
+    .Row-button {
+      @include button($primary-color, white);
+    }
+    .Row-button-linux {
+      @include button($primary-color, white);
+      font-size: $font-size-sm;
+      padding: 0.7em 1.5em;
+      margin-bottom: .5rem;
+      font-size: $font-size-sm;
+      &:first-child {
+        margin-right: .5rem;
+      }
+    }
+  }
+  &-navy {
+    background-color: $blue-navy;
+    color: white;
+  }
+  &-reverse &-row {
+    flex-direction: row-reverse;
+  }
+}
+
+.App-marketing {
+  background-color: white;
+  text-align: center;
+  &-container {
+    @extend .container;
+  }
+  &-row {
+    @extend .row;
+  }
+  &-column {
+    @extend .col-12;
+    @extend .col-sm-4;
+    display: flex;
+  }
+  &-box {
+    background: #FFFFFF;
+    box-shadow: 0 0 1px 0 rgba(50,50,50,0.03), 0 1px 1px 0 rgba(50,50,93,0.05), 0 1px 3px 0 rgba(50,50,93,0.10);
+    border-radius: $border-radius;
+    padding: $space-md;
+    margin: -$space 0 $space-lg 0;
+    &-img {
+      margin: 0 0 1rem 0;
+      height: 6rem;
+      width: auto;
+    }
+    &-title {
+      font-size: $font-size-lg;
+      margin: 0 0 1rem 0;
+    }
+    &-description {
+      margin: 0;
+    }
+  }
+}
+
+.Testimonial {
+  background: $primary-color;
   color: white;
   text-align: center;
-  border-top: 3px solid #007896;
+  &-container {
+    @extend .container;
+    padding-top: $space-md;
+    padding-bottom: $space-lg;
+  }
+  &-title {
+    font-size: $font-size-xl;
+    margin: 0 0 0.25em;
+  }
+  &-content {
+    margin: 0 0 1.5em;
+    a {
+      color: white;
+      text-decoration: underline;
+      transition: opacity 200ms ease;
+      &:hover {
+        opacity: .8;
+        transition: opacity 200ms ease;
+      }
+      &:active {
+        opacity: 1;
+        transition: opacity 200ms ease;
+      }
+    }
+  }
+  &-quote {
+    font-size: $font-size-md;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 45rem;
+    line-height: 1.8;
+  }
+}
+
+.Upgrade {
+  text-align: center;
+  background: white;
+  &-container {
+    @extend .container;
+    padding-top: $space-md;
+    padding-bottom: $space;
+  }
+  &-img {
+    margin-bottom: 0.75rem;
+  }
+  &-title {
+    font-size: $font-size-xl;
+    margin: 0 0 1rem;
+  }
+  &-button {
+    @include button($primary-color, white);
+    margin-bottom: $space-lg;
+  }
+  &-content {
+    font-style: italic;
+    color: $gray-dark;
+    font-size: $font-size-sm;
+    a {
+      color: $primary-color;
+      transition: 200ms color ease;
+      &:hover {
+        color: lighten($primary-color, 5%);
+        transition: 200ms color ease;
+      }
+      &:active {
+        color: lighten($primary-color, 10%);
+        transition: 200ms color ease;
+      }
+    }
+  }
+}
+
+.Footer {
+  background-color: $blue-navy;
+  color: white;
+  text-align: center;
+  border-top: 3px solid $primary-color;
   padding: 1rem;
   &-logo {
     display: block;

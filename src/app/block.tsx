@@ -7,10 +7,10 @@ interface Props {
 }
 
 export const Block = ({ img, title, description }: Props) => (
-  <div className="App-marketing-box">
-    <img src={img} alt="" className="App-marketing-box-img" />
-    <div className="App-marketing-box-content">
-      <p className="App-marketing-box-title">{title}</p>
+  <div className="App-marketing-column">
+    <div className="App-marketing-box">
+      <img src={img} alt="" className="App-marketing-box-img" />
+      <h3 className="App-marketing-box-title">{title}</h3>
       <p className="App-marketing-box-description">{description}</p>
     </div>
   </div>

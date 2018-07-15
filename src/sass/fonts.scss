@@ -11,6 +11,14 @@ $font-path: '../assets/fonts';
 @font-face {
   font-family: 'Lato';
   font-style: normal;
+  font-weight: 300;
+  src: url($font-path+'/Lato-Light.woff2') format('woff2'),
+    url($font-path+'/Lato-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
   font-weight: 400;
   src: url($font-path+'/Lato-Regular.woff2') format('woff2'),
     url($font-path+'/Lato-Regular.woff') format('woff');
@@ -19,9 +27,33 @@ $font-path: '../assets/fonts';
 @font-face {
   font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
-  src: url($font-path+'/Lato-Light.woff2') format('woff2'),
-    url($font-path+'/Lato-Light.woff') format('woff');
+  font-weight: 500;
+  src: url($font-path+'/Lato-Medium.woff2') format('woff2'),
+    url($font-path+'/Lato-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  src: url($font-path+'/Lato-Semibold.woff2') format('woff2'),
+    url($font-path+'/Lato-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url($font-path+'/Lato-Bold.woff2') format('woff2'),
+    url($font-path+'/Lato-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url($font-path+'/Lato-Black.woff2') format('woff2'),
+    url($font-path+'/Lato-Black.woff') format('woff');
 }
 
 /* --------------------------------

@@ -37,7 +37,7 @@ body {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 ul {
@@ -52,11 +52,4 @@ a {
 /* suppress focus ring on form controls for mouse users */
 [data-whatintent='mouse'] *:focus {
   outline: none;
-}
-
-.card {
-  border: 1px solid #dbdde2;
-  box-shadow: $box-shadow;
-  background-color: white;
-  border-radius: $border-radius;
 }

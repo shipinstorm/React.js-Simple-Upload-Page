@@ -1,1 +1,22 @@
-$primary-color: #457590;
+$gray-lightest: #F8F8F8;
+$gray-light   : #d6d6d6;
+$gray         : #9fabb9;
+$gray-medium  : #7b8695;
+$gray-dark    : #8F8F8F;
+$gray-darkest : #333333;
+
+$red          : #ff5050;
+$yellow       : #feef62;
+$green-light  : #b4fe62;
+$green        : #7ad832;
+$green-dark   : #00b655;
+$blue-green   : #008877;
+$blue-light   : #90dcf3;
+$blue         : #1eb8e7;
+$blue-medium  : #1097c0;
+$blue-dark    : #067997;
+$blue-darker  : #005268;
+$blue-navy    : #17324F;
+
+$primary-color: $blue-medium;
+$text-color   : $gray-darkest;

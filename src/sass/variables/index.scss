@@ -1,9 +1,17 @@
 @import './typography';
 @import './colors';
 
-$transition: 200ms ease;
+$transition           : 200ms ease;
 
-$button-border-radius: 3px;
-$border-radius: 6px;
+$button-border-radius : 3px;
+$border-radius        : 6px;
 
-$box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.05);
+$box-shadow           : 0 3px 10px 3px rgba(0, 0, 0, 0.05);
+
+
+$space                : 1.25rem;    // 20px
+
+$space-sm             : $space/2;   // 10px
+$space-md             : $space*2;   // 40px
+$space-lg             : $space*3;   // 60px
+$space-xl             : $space*4;   // 70px
