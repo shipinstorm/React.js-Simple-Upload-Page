@@ -235,7 +235,7 @@ class App extends React.Component<{}, State> {
                 <p className="Row-description">
                   Buy, send, receive, swap, and manage all of your cryptocurrency with our dedicated
                   desktop application. It’s the same experience you are familiar with but now on
-                  your computer.
+                  your desktop.
                 </p>
                 {OS === 'Linux' ? (
                   <div>
@@ -276,7 +276,7 @@ class App extends React.Component<{}, State> {
               <Block
                 img={Manage}
                 title="Manage Better"
-                description="Beyond sending, you can also request payments and manage the accounts you access and addresses you send to, easier than ever."
+                description="Beyond sending, you can also request payments and manage the accounts you access and the addresses you send to. It’s easier than ever."
               />
             </div>
           </div>
