@@ -158,10 +158,10 @@ class App extends React.Component<{}, State> {
                     {version && <span className="App-version">Version {version}</span>}
                   </a>
                   <a href={HOW_TO_VERIFY_URL} className="App-other-links-release-notes">
-                    verify authenticity
+                    Verify Authenticity
                   </a>
                   <a href={checksumsGpg.link} className="App-other-links-release-notes">
-                    signed checksums
+                    Signed Checksums
                   </a>
                 </div>
               </div>
@@ -205,10 +205,10 @@ class App extends React.Component<{}, State> {
                 {OS === 'Linux' ? (
                   <div>
                     <a href={linux32.link} className="Row-button Row-button-linux">
-                      Install Instantly (32-bit)
+                      Download Instantly (32-bit)
                     </a>
                     <a href={linux64.link} className="Row-button Row-button-linux">
-                      Install Instantly (64-bit)
+                      Download Instantly (64-bit)
                     </a>
                   </div>
                 ) : (
@@ -216,7 +216,7 @@ class App extends React.Component<{}, State> {
                     href={defaultBuilds.filter(build => build.name === OS)[0].link}
                     className="Row-button"
                   >
-                    Install Instantly
+                    Download Instantly
                   </a>
                 )}
               </div>
@@ -286,10 +286,11 @@ class App extends React.Component<{}, State> {
           <div className="Testimonial-container">
             <h2 className="Testimonial-title">Open-Source & Fully Audited</h2>
             <p className="Testimonial-content">
-              Our code is{' '}
+              our code is{' '}
               <a target="_blank" rel="noopener noreferrer" href={MYCRYPTO_GITHUB_URL}>
-                open-source
-              </a>, licensed under MIT, and has undergone a{' '}
+                open-sourced
+              </a>{' '}
+              under the MIT License and has undergone a{' '}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
