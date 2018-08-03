@@ -22,28 +22,32 @@ const getPlatform: any = (title: string) => {
 
 export const Platform = ({ title, href, linux32Url, linux64Url }: Props) => {
   return getPlatform(title) === 'lin' ? (
-    <div className="App-platform">
-      <i className="nc-icon nc-linux" />
-      <div className="App-platform-content">
-        <p className="App-platform-title">{title}</p>
-        <a href={linux32Url}>32-bit</a>
-        <a href={linux64Url}>64-bit</a>
+    <div className="Platforms-column">
+      <div className="Platforms-button">
+        <i className="nc-icon nc-linux" />
+        <div className="Platforms-button-content">
+          <p className="Platforms-button-title">{title}</p>
+          <a href={linux32Url}>32-bit</a>
+          <a href={linux64Url}>64-bit</a>
+        </div>
       </div>
     </div>
   ) : (
-    <a href={href} className="App-platform">
-      <i
-        className={`nc-icon ${
-          title === 'macOS'
-            ? 'nc-apple'
-            : title === 'Windows'
-              ? 'nc-windows'
-              : title === 'Linux'
-                ? 'nc-linux'
-                : 'nc-window-dev'
-        }`}
-      />
-      <p className="App-platform-title">{title}</p>
-    </a>
+    <div className="Platforms-column">
+      <a href={href} className="Platforms-button">
+        <i
+          className={`nc-icon ${
+            title === 'macOS'
+              ? 'nc-apple'
+              : title === 'Windows'
+                ? 'nc-windows'
+                : title === 'Linux'
+                  ? 'nc-linux'
+                  : 'nc-window-dev'
+          }`}
+        />
+        <p className="Platforms-button-title">{title}</p>
+      </a>
+    </div>
   );
 };
