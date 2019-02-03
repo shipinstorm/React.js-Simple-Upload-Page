@@ -1,5 +1,3 @@
-# Simple React.js Download Page
-
 ## Running the Project
 
 First install dependencies
